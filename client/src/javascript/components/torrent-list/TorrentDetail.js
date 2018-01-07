@@ -1,4 +1,4 @@
-import {FormattedDate, FormattedMessage, FormattedNumber} from 'react-intl';
+import {FormattedMessage, FormattedNumber} from 'react-intl';
 import React from 'react';
 
 import CalendarCreatedIcon from '../icons/CalendarCreatedIcon';
@@ -25,7 +25,7 @@ import UploadThickIcon from '../icons/UploadThickIcon';
 const booleanRenderer = (value) => {
   return value ? icons.checkmark : null;
 };
-const dateRenderer = date => <FormattedDate value={date * 1000} />;
+const dateRenderer = date => "" + new Date(date * 1000).toISOString().slice(0, 19).replace("T", " ");
 const peersRenderer = (peersConnected, totalPeers) => {
   return (
     <FormattedMessage

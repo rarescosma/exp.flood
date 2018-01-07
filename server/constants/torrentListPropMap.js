@@ -205,7 +205,7 @@ torrentListPropMap.set(
 torrentListPropMap.set(
   'dateAdded',
   {
-    methodCall: 'd.custom=addtime',
+    methodCall: 'd.timestamp.started=',
     transformValue: dateTransformer
   }
 );
